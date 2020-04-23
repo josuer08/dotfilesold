@@ -1,0 +1,120 @@
+|       PONTIFICIA UNIVERSIDAD CATÓLICA MADRE Y MAESTRA        |
+| :----------------------------------------------------------: |
+| ![PUCMM](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EscudoPucmm.gif/240px-EscudoPucmm.gif) |
+|          **FACULTAD DE CIENCIAS DE LA INGENIERÍA**           |
+|         **ESCUELA DE SISTEMAS Y TELECOMUNICACIONES**         |
+|                       ST-ITT-463-T-001                       |
+|                          **TAREA:**                          |
+|                *Compresion de imagen y video*                |
+|                     **PRESENTADO POR:**                      |
+|                *OSCAR JOSUE RODRIGUEZ BLANCO*                |
+|                         *2014-0147*                          |
+|                      **PRESENTADO A:**                       |
+|                    *ING. PABLO RODRIGUEZ*                    |
+|                    **FECHA DE ENTREGA:**                     |
+|                 *LUNES, 13 DE MAYO DEL 2019*                 |
+|     **SANTIAGO DE LOS CABALLEROS, REPÚBLICA DOMINICANA**     |
+|                             ---                              |
+
+---
+
+---
+
+# Tabla de Contenidos
+
+
+
+[TOC]
+
+# Compresión
+
+La maravilla de la digitalizacion nos ha traído el gran beneficio de poder tener imágenes, vídeos, aplicaciones, texto y audio en grandes volúmenes y con muy alta calidad, algo que definitivamente ha sido un gran paso en todas estas áreas, pero al parecer nuestra capacidad de transmitir datos ha crecido a un paso un poco mas lento que nuestra capacidad de crear estos datos, por lo que nos hemos tenido que poner un poco creativos en la forma de almacenar y enviar dichos datos. debido a este problema existe un área de la computación que se dedica exclusivamente a la compresión y descompresión de datos mediante métodos matemáticos, esto nos ha permitido poder trabajar de mejor forma con todos estos grandes volúmenes de datos.
+
+La compresión se basa en fundamentalmente encontrar patrones o repeticiones que explotar dentro de los datos para ser comprimidos, como por ejemplo convertir `JJJJJJJJ` en simplemente `8J`, algo que nos ahorra una cantidad enorme  de datos.
+
+Toda compresión se divide en dos grupos fundamentales:
+
++ Compresión con perdidas
++ Compresión sin perdidas
+
+Este es un concepto simple de seguir, el primero significa que obtendremos los datos idénticos a los originales al descomprimir, mientras el segundo significa que tendremos un conjunto de datos que se va parecer al original, pero definitivamente vamos a perder información de la que antes teníamos.
+
+Para llegar a esos tipos de compresión debemos tener en cuenta (también lo veremos mas adelante) que hay tres tipos de datos que existen en cualquier mensaje y que son:
+
++ Información básica: Es la información que necesita ser enviada para poder reconstruir la senal.
++ Información irrelevante: información que no es necesaria para y que por tanto no aporta información, un ejemplo serian las frecuencias por encima de 20KHz para una conversación.
++ información redundante: Información que puede ser predecible o es repetitiva.
+
+Una de las "advertencias" que solemos recibir al hablar de esto que es recomendable que no se envíen cosas comprimidas con perdidas a través de protocolos con perdida como UDP.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Quality_comparison_jpg_vs_saveforweb.jpg/800px-Quality_comparison_jpg_vs_saveforweb.jpg)
+
+> Extraida en alta calidad de https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Quality_comparison_jpg_vs_saveforweb.jpg/800px-Quality_comparison_jpg_vs_saveforweb.jpg
+
+Esta imagen es una buena comparativa de múltiples compresiones y como se ven, ademas de comprara con el size de los archivos de las distintas imágenes y puede darnos una buena idea de como afecta la compresión a las imágenes,
+
+## Compresión de imagen
+
+Como con todos los otros datos tenemos compresión con perdida y compresión sin perdida, en las imágenes tenemos los siguientes conjuntos de técnicas en cada grupo:
+
+#### Con perdida:
+
++ [ ] Codificación predictiva con perdidas
++ [ ] Codificación de la transformada
+
+#### Sin perdida:
+
++ [ ] Codificación de longitud variable ~~Huffman~~
++ [ ] Codificación en planos de bits: composición y RLE
++ [ ] Fundamentos de LZW y CCYTT
++ [ ] Codificación predictiva sin perdidas
+
+### Formatos de imagen
+
+#### TIFF (Tagged Image File Format)
+
+Es un formato muy flexible y se puede usar con o sin perdida. los detalles del algoritmo de almacenamiento de la imagen se incluyen como parte del fichero. Normalmente se utiliza para el almacenamiento de imágenes sin ninguna compresión.
+
+#### PNG
+
+Es también un formato de almacenamiento sin perdida, pero al contrario que con TIFF si se usa para imágenes comprimidas, pero al ser una compresión sin perdida entonces siempre conseguimos la calidad original
+
+#### GIF
+
+GIF sirve para almacenar imágenes o animaciones con una compresión de pocas perdidas, pues al solo utilizar 256 colores puede comprimir mucho, pero no son 256 colores específicos, sino que elige los 256 colores mas utilizados en la imagen y utiliza otros métodos mas para conseguir colores lo mas parecidos posibles a la imagen original y tener una versión lo mas cercana al ojo humano posible. Ademas de esto también comprime las áreas del mismo color mediante código de secuencias. por lo que al fin y al cabo si se tiene una compresión fuerte y con perdidas que puede hacer que la calidad de la imagen baje drásticamente, pero también así mismo baja el peso de la misma.
+
+#### JPG
+
+Es el método de compresión mas adecuados para imágenes que tengan tonos continuos muy similares que contienen muchos colores, este método nos permite diferentes niveles de compresión y en los niveles de compresión menor es muy difícil de diferenciarla de las imágenes originales.
+
+### RAW ~~BMP PSP PSD ...~~
+
+Son todos formatos de imagen no comprimida que tienen factores menores a los de TIFF, pero estos no son estándares sino que dependen de la marca, lo que los hace un poco mas difíciles de manejar. en el caso de BMP es de microsoft, PSP Paint Shop Pro, PSD Photoshop, XCF Gimp.
+
+## Compresión de vídeo
+
+El vídeo se puede comprimir de dos formas básicas, pero es importante decir que normalmente se utiliza una compresión que es una mezcla de ambas técnicas ya que suele ser lo que da los mejores resultados.
+
+Existe la compresión cuadro a cuadro o compresión espacial de imágenes, para esto se aplican las mismas técnicas de compresión de imágenes a cada una de las imágenes de los cuadros del vídeo, esto consigue una gran compresión con una calidad muy parecida a la original en dependencia del tipo de método que se este utilizando, esto es algo que siempre hay que tener muy en cuenta.
+
+### Compresión cuadro a cuadro
+
+Estas ya han sido explicadas a fondo en la sección anterior, pero es bueno recordar que normalmente no se utiliza esta técnica por si sola y que se suele aplicar con algoritmos un poco diferentes, ya que es necesario un algoritmo que pueda aprovechar mejor los baches de imágenes, ademas es común notar que esto se aplique luego de aplicar las otras técnicas en el caso del almacenamiento del vídeo, pero no siempre es así si es para el stream.
+
+### Compresión continua
+
+Para poder entender esto necesitamos comprender que si bien una imagen es un arreglo bidimensional de pixeles y un vídeo se puede ver como un set de imágenes, también podemos ver los vídeo como un arreglo tridimensional de pixeles, donde tenemos el ancho, alto y tiempo como dimensiones y si aplicamos las técnicas que vimos antes a un arreglo tridimensional entonces podríamos tener la idea de juntar los pixeles que se replican en el tiempo imagen tras imagen y comprimir los. esto es justamente la forma en que se hace.
+
+Tanto en la compresión propuesta por la ITU T como la MPEG se atienden los siguientes tipos de imágenes:
+
++ I: codificadas por si mismas
++ P: Extrapoladas
++ B: Interpoladas
+
+Básicamente lo que se hace acá es que tenemos unas imágenes que se decodifican del JPEG que son las `I` y estas son simplemente imágenes referencias de las cuales se hace un mapa de movimiento de bloques, para revidar a donde se movieron los bloques que habían en ellas, luego están las imágenes `P` que se decodifican de otra imagen anterior ~~o posterior~~ p o i, y por ultimo las imágenes `B` que se decodifican de una imagen anterior y de una posterior. Cambien es posible que algunos bloques individuales sean tipo I para evitar ciertos errores cuando hay ya muchos bloques predichos. 
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/IPB_images_sequence.png/750px-IPB_images_sequence.png)
+
+
+
+### 

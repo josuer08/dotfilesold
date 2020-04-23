@@ -1,0 +1,71 @@
+|       PONTIFICIA UNIVERSIDAD CATÓLICA MADRE Y MAESTRA        |
+| :----------------------------------------------------------: |
+| ![PUCMM](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EscudoPucmm.gif/240px-EscudoPucmm.gif) |
+|          **FACULTAD DE CIENCIAS DE LA INGENIERÍA**           |
+|         **ESCUELA DE SISTEMAS Y TELECOMUNICACIONES**         |
+|                       ST-ITT-463-T-001                       |
+|                          **TAREA:**                          |
+|                          *SIGTRAN*                           |
+|                     **PRESENTADO POR:**                      |
+|                *OSCAR JOSUE RODRIGUEZ BLANCO*                |
+|                         *2014-0147*                          |
+|                      **PRESENTADO A:**                       |
+|                    *ING. PABLO RODRIGUEZ*                    |
+|                    **FECHA DE ENTREGA:**                     |
+|                            *2019*                            |
+|     **SANTIAGO DE LOS CABALLEROS, REPÚBLICA DOMINICANA**     |
+|                             ---                              |
+
+---
+
+---
+
+# Tabla de Contenidos
+
+
+
+[TOC]
+
+# SIGTRAN
+
+> Signaling Transportation
+
+Cuando la IETF se propuso desarrollar un conjunto de protocolos para el transporte de la senalizacion de telefonía `SS7` y `Q.931` a traves de redes `IP` creo un grupo de trabajo llamado SIGTRAN, luego por extensión se le llamo con el mismo nombre al resultado del trabajo de este grupo, trabajo que fue publicado en el *RFC 2719*, con el nombre de **Architectural Framework for Signaling Transport**. La familia de protocolos de SIGTRAN esta compuesta por:
+
++ **SCTP**: Stream Control Transmision Protocol
++ **IUA**: ISDN User Adaptation
++ **M2PA**: Message Transfer part 2 ~~MTP~~ User Peer-to-Peer Adaptation Layer
++ **M2UA**: Message Transfer part 2 ~~MTP~~ User Adaptation Layer
++ **M3UA**: Message Transfer part 3 ~~MTP~~ User Adaptation Layer
++ **SUA**: Signalling Connection Control Part ~~SSCP~~ User Adaptation
++ **V5UA**: V5 User Adaptation
++ **DUA**: DPNSS/DASS2 User Adaptation
+
+![Relacion de protocolos](/home/josuer08/Pictures/table.png)
+
+SCTP proporciona el protocolo de transporte para los mensajes de SIGTRAN, es una especie de alternativa a TCP o UDP, lo que lo hace fundamental en SIGTRAN, ya que este es usado por todos los demás protocolos. 
+
+IUA proporciona una capa de adaptación para el backhaul ( transporte de senalizacion ) de los mensajes de Q.921 y la interfaz de servicio a través de una red IP. 
+
+V5UA proporciona una capa de adaptación para el backhaul de los mensajes de V5.2 y la interfaz de servicio a través de una red IP. Es una variación de IUA y se especifica en RFC 3807.
+
+M2PA proporciona una capa de adaptación para proporcionar un link de señalización MTP SS7 a través de una red IP. La diferencia entre M2PA y M2UA es básicamente el hecho de que en el M2UA no se utiliza MTP3 para los procedimientos de administración, mientras aqui en M2PA si se utilizan estos.
+
+M2UA proporciona una capa de adaptación para el backhaul continuo de los mensajes de MTP Nivel 2 y la interfaz de servicio a través de una red IP. 
+
+M3UA proporciona una capa de adaptación para el backhaul o el emparejamiento de los mensajes de MTP Nivel 3 y la interfaz de servicio a través de una red IP. 
+
+SUA proporciona una capa de adaptación para el backhaul o el emparejamiento de los mensajes de usuario de la Parte de Control de Conexión de Señalización y la interfaz de servicio a través de una red IP. 
+
+## Componentes
+
++ Media Gateway Controller:
+  + Es el responsable de mediar el control de las llamadas y controlar el acceso de la red IP hacia y desde la red PSTN.
++ Signaling Gateway:
+  + Responsable de la inter conexión a la red SS7 y la transmisión de mensajes de señalización a los nodos IP.
++ Media Gateway :
+  + Responsable de empaquetar el trafico de voz y transmisión del trafico hacia el destino.
++ IP con control de servicios:
+  + Equipo que solo existe en la red IP pero que es direccionable desde la red SS7.
++ Telefono IP:
+  + Terminal.

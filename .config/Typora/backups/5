@@ -1,0 +1,58 @@
+|       PONTIFICIA UNIVERSIDAD CATÓLICA MADRE Y MAESTRA        |
+| :----------------------------------------------------------: |
+| ![PUCMM](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/EscudoPucmm.gif/240px-EscudoPucmm.gif) |
+|          **FACULTAD DE CIENCIAS DE LA INGENIERÍA**           |
+|         **ESCUELA DE SISTEMAS Y TELECOMUNICACIONES**         |
+|                       ST-ITT-463-T-001                       |
+|                          **TAREA:**                          |
+|                           *MEGACO*                           |
+|                     **PRESENTADO POR:**                      |
+|                *OSCAR JOSUE RODRIGUEZ BLANCO*                |
+|                         *2014-0147*                          |
+|                      **PRESENTADO A:**                       |
+|                    *ING. PABLO RODRIGUEZ*                    |
+|                    **FECHA DE ENTREGA:**                     |
+|                            *2019*                            |
+|     **SANTIAGO DE LOS CABALLEROS, REPÚBLICA DOMINICANA**     |
+|                             ---                              |
+
+---
+
+---
+
+# Tabla de Contenidos
+
+
+
+[TOC]
+
+# H248 ~~MEGACO~~
+
+Este protocolo es un sistema que se ha creado para poder interconectar redes telefonicas de tipo PSTN con redes basadas en paquetes ~~Especialmente redes IP~~, este protocolo es una contracion del ingles `Media Gateway Control Protocol` y en palabras llanas funciona como una especie de traductor. normalmente se le ve en conjunto con otros protocolos para poder lograr tal traduccion como la que se esta hablando, un ejemplo de esto puede ser la sigueiiinte estructura.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Converged_Network_Architecture.png/800px-Converged_Network_Architecture.png)
+
+Donde se puede ver claramente que MEGACO esta siendo utilizado para el control de los Media Gateway, de forma que esto se corresponda con el resto de cosas que pasan en esta estructura. Como puede verse espracticamente un protocolo de complemento a sip o a h323 que se veran mas adelante.
+
+## Modelo de conexion
+
+El modelo de conexion de MEGACO es orientado a objetos, estos objetos que se encuentran en el Media gateway pueden ser controlados o cambiados por el Media gateway Controller, normalmente se consta de un objeto terminacion (que representa las terminales) y un objeto contecto que contiene terminales dentro, el contexto normalmente representa una llamada ~~O sesion de cualquier tipo~~ y esto hace que puedan existir multiples tipos de contextos:
+
+![](http://godynamix.com/tech/voip/BilderMegaco/tut38.gif)
+
+Como puede verse incluso hay contextos nulos en los que no hay multiples terminales ni relaciones, o hay una terminal y una relacion.
+
+Para que un MGC pueda modificar estos objetos es necesario que aplique uno de los posibles mensajes de instruccion que existen y los cuales son los siguientes:
+
+| Acción            | Dirección |
+| ----------------- | --------- |
+| Add               | MGC-->MG  |
+| Modify            | MGC-->MG  |
+| Substract         | MGC-->MG  |
+| Move              | MGC-->MG  |
+| AuditValue        | MGC-->MG  |
+| AuditCapabilities | MGC-->MG  |
+| Notify            | MG-->MGC  |
+| ServiceChange     | MGC-->MG  |
+
+![](http://www.servervoip.com/blog/wp-content/uploads/Interaccion-entre-el-MGC-y-el-MG-en-H.248.png)

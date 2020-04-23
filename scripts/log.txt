@@ -1,0 +1,8 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-03-31 00:43 EDT
+Nmap scan report for _gateway (192.168.1.1)
+Host is up (0.0015s latency).
+Nmap scan report for 192.168.1.36
+Host is up (0.0023s latency).
+Nmap scan report for E7440 (192.168.1.58)
+Host is up (0.00032s latency).
+Nmap done: 256 IP addresses (3 hosts up) scanned in 3.42 seconds
