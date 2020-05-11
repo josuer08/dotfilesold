@@ -116,7 +116,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
+# vi mode in the shell
+set -o vi
 # transform md anotations into PDF
 mdpdf () { pandoc "$1".md -t beamer -o "$1".pdf ;}
 #byebye for shutdown
@@ -127,20 +128,27 @@ metadata () { echo "Salida del comando stat" ; stat "$1" ; echo "Salida del coma
 alias ccat='highlight --out-format=ansi'
 # activates the autocd mode
 shopt -s autocd
-# examples from tldr
-alias example='tldr'
 # wifi available
 alias wifi='nmcli d wifi'
 # personalized ps1
 export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$"
 alias autowal='wal --iterative -i /usr/share/backgrounds/ > /dev/null'
 #figlet de mi nombre
-#whoami | figlet Josuer08 | lolcat -F 0.25;
-whoami | figlet Josuer08 | lolcat;
+whoami | figlet Josuer08 | lolcat -F 0.25;
+#whoami | figlet Josuer08 | lolcat;
 # agragando el comando gitdotfiles para manejar los dotfiles
 alias gitdotfiles='/usr/bin/git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME';
 
-
+function cdls() {
+    DIR="$*";
+        # if no DIR given, go home
+        if [ $# -lt 1 ]; then
+                DIR=$HOME;
+    fi;
+    builtin cd "${DIR}" && \
+    # use your preferred ls command
+        ls -F --color=auto
+}
 
 
 
