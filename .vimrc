@@ -10,7 +10,6 @@ set wildmenu
 "con el comando ":ls" que nos deja ver todos los buffer
 
 
-
 "PARA CREAR TAGS EN UN PROYECTO:
 command! MakeTags !ctags -R .
 " ahora al hacer ":MakeTags" podremos hacer un tags file

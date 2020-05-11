@@ -16,7 +16,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'morhetz/gruvbox'
-
+Plug 'dracula/vim',{'as':'dracula'}
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
@@ -29,10 +29,13 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 set timeout timeoutlen=2000
 
+set termguicolors
 set number
 set ignorecase
 set smartcase
 set relativenumber
+"colorscheme dracula
+colorscheme gruvbox
 
 
 
@@ -83,7 +86,6 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 
-colorscheme gruvbox
 
 
 " sync open file with NERDTree

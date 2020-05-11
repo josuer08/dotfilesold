@@ -3445,3 +3445,13 @@ ERROR 4/18/2020, 2:42:20 AM  (node:24311) [DEP0005] DeprecationWarning: Buffer()
 INFO 4/18/2020, 2:42:20 AM  [focus] 1
 INFO 4/18/2020, 2:42:31 AM  ------------------quit------------------
 INFO 4/18/2020, 2:42:31 AM  ------------------will-quit------------------
+INFO 5/3/2020, 4:09:01 PM  5829fb89-bceb-40b3-9320-51223eddf432
+INFO 5/3/2020, 4:09:01 PM  ------------------start------------------
+INFO 5/3/2020, 4:09:01 PM  typora version: 0.9.81
+DEBUG 5/3/2020, 4:09:01 PM  [ '/usr/share/typora/Typora' ]
+ERROR 5/3/2020, 4:09:01 PM  (node:321417) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+ERROR 5/3/2020, 4:09:01 PM  (node:321417) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+DEBUG 5/3/2020, 4:09:01 PM  app.openFile
+INFO 5/3/2020, 4:09:01 PM  [focus] 1
+INFO 5/3/2020, 4:09:04 PM  ------------------quit------------------
+INFO 5/3/2020, 4:09:04 PM  ------------------will-quit------------------
