@@ -99,7 +99,8 @@ shopt -s autocd
 # wifi available
 alias wifi='nmcli d wifi'
 # personalized ps1
-export PS1="[$?]\[\]\[\033[38;5;40m\]\u@\h\[\]:\[\]\[\033[38;5;45m\]\w\[\]\n\[\]\[\033[38;5;166m\]\$\[\]"
+export PS1="\[\033[38;5;247m\][\$?]\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;40m\]\u@\h\[$(tput sgr0)\]:\[$(tput sgr0)\]\[\033[38;5;45m\]\w\[$(tput sgr0)\]\n\\$\[$(tput sgr0)\]"
+
 alias autowal='wal --iterative -i /usr/share/backgrounds/ > /dev/null'
 #figlet de mi nombre
 whoami | figlet Josuer08 | lolcat -F 0.25;
@@ -261,5 +262,3 @@ remindme() {
 
 #}}}
 
-### add to xterm
-xrdb -merge ~/.Xresources >> /dev/null 2>&1
