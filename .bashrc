@@ -261,4 +261,5 @@ remindme() {
   }
 
 #}}}
-
+export PATH="$HOME/.local/bin:$PATH";
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH";
