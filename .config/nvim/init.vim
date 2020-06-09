@@ -1,7 +1,7 @@
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
-
+Plug 'ChristianChiarulli/codi.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 "Plug 'tsony-tsonev/nerdtree-git-plugin'
@@ -36,8 +36,17 @@ set smartcase
 set relativenumber
 "colorscheme dracula
 colorscheme gruvbox
+"THIS IS FOR CODIIII DELTEMEEEEEEEEEEEE HEEEEEEY
+" Change the color
+highlight CodiVirtualText guifg=cyan
+
+let g:codi#virtual_text_prefix = "❯ "
 
 
+"
+let g:codi#aliases = {
+                   \ 'javascript.jsx': 'javascript',
+                   \ }
 
 
 " open NERDTree automatically

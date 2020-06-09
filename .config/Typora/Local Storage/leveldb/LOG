@@ -1,3 +1,3 @@
-2020/05/03-16:09:03.682 4e810 Reusing MANIFEST leveldb/MANIFEST-000001
-2020/05/03-16:09:03.682 4e810 Recovering log #3
-2020/05/03-16:09:03.682 4e810 Reusing old log leveldb/000003.log 
+2020/06/08-23:14:25.485 169dc Reusing MANIFEST /home/josuer08/.config/Typora/Local Storage/leveldb/MANIFEST-000001
+2020/06/08-23:14:25.485 169dc Recovering log #3
+2020/06/08-23:14:25.485 169dc Reusing old log /home/josuer08/.config/Typora/Local Storage/leveldb/000003.log 

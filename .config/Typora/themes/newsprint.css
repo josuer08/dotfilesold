@@ -78,6 +78,12 @@ html, body {
 	max-width: 40em;
 }
 
+@media only screen and (min-width: 1400px) {
+	#write {
+			max-width: 914px;
+	}
+}
+
 ol li {
 	list-style-type: decimal;
 	list-style-position: outside;
@@ -586,4 +592,8 @@ input {
 .ty-preferences .window-header {
 	border-bottom: 1px dashed #202B33;
 	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
 }

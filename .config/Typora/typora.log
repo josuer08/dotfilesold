@@ -3455,3 +3455,43 @@ DEBUG 5/3/2020, 4:09:01 PM  app.openFile
 INFO 5/3/2020, 4:09:01 PM  [focus] 1
 INFO 5/3/2020, 4:09:04 PM  ------------------quit------------------
 INFO 5/3/2020, 4:09:04 PM  ------------------will-quit------------------
+INFO 6/8/2020, 11:05:35 PM  luanchFromDiffVersion, pre version is 0.9.81
+INFO 6/8/2020, 11:05:35 PM  overwriteThemeFolder
+INFO 6/8/2020, 11:05:35 PM  ------------------start------------------
+INFO 6/8/2020, 11:05:35 PM  typora version: 0.9.89
+DEBUG 6/8/2020, 11:05:35 PM  [ '/usr/share/typora/Typora', '/home/josuer08/Desktop/notas.md' ]
+DEBUG 6/8/2020, 11:05:35 PM  app.openFile
+INFO 6/8/2020, 11:05:35 PM  addRecentDocument
+INFO 6/8/2020, 11:05:35 PM  [Raven] instanceKey = 809dabbc-50b4-4180-85e7-69b051aeb70b
+INFO 6/8/2020, 11:05:35 PM  [Raven] userId = 36dbcd95-82b2-4c56-b1fb-bebdb02ddca6
+INFO 6/8/2020, 11:05:35 PM  [focus] 1
+INFO 6/8/2020, 11:05:40 PM  ----------------before-quit-----------------
+INFO 6/8/2020, 11:05:40 PM  ------------------will-quit------------------
+INFO 6/8/2020, 11:08:19 PM  ------------------start------------------
+INFO 6/8/2020, 11:08:19 PM  typora version: 0.9.89
+DEBUG 6/8/2020, 11:08:19 PM  [ '/usr/share/typora/Typora' ]
+INFO 6/8/2020, 11:08:19 PM  [Raven] instanceKey = 38f36ba4-1d8a-4c6e-8132-95c990f1479d
+DEBUG 6/8/2020, 11:08:19 PM  app.openFile
+INFO 6/8/2020, 11:08:19 PM  [Raven] userId = 36dbcd95-82b2-4c56-b1fb-bebdb02ddca6
+INFO 6/8/2020, 11:08:19 PM  [focus] 1
+INFO 6/8/2020, 11:08:43 PM  ----------------before-quit-----------------
+INFO 6/8/2020, 11:08:43 PM  ------------------will-quit------------------
+INFO 6/8/2020, 11:10:44 PM  ------------------start------------------
+INFO 6/8/2020, 11:10:44 PM  typora version: 0.9.89
+DEBUG 6/8/2020, 11:10:44 PM  [ '/usr/share/typora/Typora', 'ISDN.md' ]
+DEBUG 6/8/2020, 11:10:44 PM  app.openFile
+INFO 6/8/2020, 11:10:44 PM  addRecentDocument
+INFO 6/8/2020, 11:10:44 PM  [Raven] instanceKey = 2248dd3b-d728-4850-bc1d-133048033681
+INFO 6/8/2020, 11:10:44 PM  [Raven] userId = 36dbcd95-82b2-4c56-b1fb-bebdb02ddca6
+INFO 6/8/2020, 11:10:44 PM  [focus] 1
+INFO 6/8/2020, 11:10:54 PM  ----------------before-quit-----------------
+INFO 6/8/2020, 11:10:54 PM  ------------------will-quit------------------
+INFO 6/8/2020, 11:14:24 PM  ------------------start------------------
+INFO 6/8/2020, 11:14:24 PM  typora version: 0.9.89
+DEBUG 6/8/2020, 11:14:24 PM  [ '/usr/share/typora/Typora' ]
+INFO 6/8/2020, 11:14:24 PM  [Raven] instanceKey = 73463fbd-988c-436a-989d-f69038c1516d
+DEBUG 6/8/2020, 11:14:24 PM  app.openFile
+INFO 6/8/2020, 11:14:24 PM  [Raven] userId = 36dbcd95-82b2-4c56-b1fb-bebdb02ddca6
+INFO 6/8/2020, 11:14:24 PM  [focus] 1
+INFO 6/8/2020, 11:14:42 PM  ----------------before-quit-----------------
+INFO 6/8/2020, 11:14:42 PM  ------------------will-quit------------------

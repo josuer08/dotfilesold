@@ -47,6 +47,19 @@ body {
     max-width: 914px;
 }
 
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
 html,
 body,
 button,
@@ -311,9 +324,14 @@ code,
 kbd,
 tt,
 var {
-    background: rgba(0, 0, 0, 0.05);
     font-size: 0.875rem;
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 kbd {
